@@ -2,7 +2,7 @@ import { ReactElement, FC } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './App.scss';
 import NavBar from './components/navBar/NavBar';
-import TextComp from './components/TextComp';
+import HomePage from './pages/home/HomePage';
 
 const App:FC = ():ReactElement => {
 
@@ -10,7 +10,9 @@ const App:FC = ():ReactElement => {
     <>
       <BrowserRouter>
         <NavBar />
-        <TextComp/>
+        <Routes>
+          <Route path='/' element={<HomePage/> } />
+        </Routes>
       </BrowserRouter>
     </>
   )

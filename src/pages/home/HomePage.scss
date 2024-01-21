@@ -1,0 +1,19 @@
+@use "../../styles/partials/mixin" as *;
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/typography" as *;
+
+.homepage{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &__container{
+        height: 91vh;
+        overflow-y: scroll;
+        @include tablet{
+            width: $tablet-screen-size;
+        }
+        @include desktop{
+            width: $desktop-screen-size;
+        }
+    }
+}

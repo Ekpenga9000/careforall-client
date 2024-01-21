@@ -21,7 +21,7 @@ const NavBar: FC = (): ReactElement => {
     let ctx = gsap.context(() => {
       gsap.from(slider.current, {
         duration: 0.4,
-        x: 50,
+        x: 100,
         opacity: 0.2,
         ease: "power1.in"
       });

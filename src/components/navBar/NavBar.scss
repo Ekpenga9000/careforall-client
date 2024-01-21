@@ -47,7 +47,7 @@
     }
     &--mobile{
       position: absolute;
-      background-color: rgba($color: $color-secondary, $alpha: 0.95);
+      background-color:$color-secondary;
       z-index: 99;
       display: flex;
       flex-direction: column;
@@ -55,8 +55,13 @@
       align-items: center;
       top: 3rem;
       right: 0;
-      height: 90vh;
-      width: 20rem;
+      height: 91vh;
+      width: 100vw;
+      margin: 0;
+      @include tablet{
+        width: 50%;
+        background-color: rgba($color: $color-secondary, $alpha: 0.95);
+      }
       @include desktop{
         display: none;
       }

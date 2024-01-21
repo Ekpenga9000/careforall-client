@@ -1,0 +1,85 @@
+@use "../../styles/partials/mixin" as *;
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/typography" as *;
+
+.nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-inline: 1rem;
+  padding-top: 1rem;
+  background-color: $color-secondary;
+  position: sticky;
+  top: 0;
+  
+  &__main {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      position: relative;
+      @include tablet {
+        width: $tablet-screen-size;
+      }
+      @include desktop{
+        width: $desktop-screen-size;
+      }
+  }
+  &__logo-link {
+    text-decoration: none;
+  }
+  &__logo-div {
+    height: 3rem;
+    width: 3rem;
+  }
+  &__logo {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+  }
+
+  &__menu{
+    display: none;
+    @include desktop{
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+    }
+    &--mobile{
+      position: absolute;
+      background-color: rgba($color: $color-secondary, $alpha: 0.95);
+      z-index: 99;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: center;
+      top: 3rem;
+      right: 0;
+      height: 90vh;
+      width: 20rem;
+      @include desktop{
+        display: none;
+      }
+    }
+  }
+  &__item{
+    display: none; 
+    @include desktop{
+      @include menu-items;
+      margin-inline: 2rem;
+      display: inline-block;
+    }
+    &--mobile{
+      @include menu-items;
+    }
+  }
+  &__icon-div{
+    @include desktop{
+      display: none;
+    }
+  }
+  &__icon{
+    cursor: pointer;
+  }
+
+}

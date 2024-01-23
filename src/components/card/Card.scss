@@ -1,0 +1,36 @@
+@use "../../styles/partials/mixin" as *;
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/typography" as *;
+
+.card{
+    background-color:$color-tertiary;
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    height: 11.0625rem;
+    border-radius: 0.625rem;
+    padding: 1rem;
+    @include tablet{
+        width: 33%;
+    }
+    @include tablet{
+        width: 25%;
+    }
+    &__container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+        gap: 0.3rem;
+    }
+    &__header{
+        font-family: Outfit, sans-serif;
+        font-weight: 500;
+        margin-bottom: 0.5rem;
+    }
+    &__p{
+        font-family: Roboto, sans-serif;
+        font-size: 0.9rem;
+    }
+}

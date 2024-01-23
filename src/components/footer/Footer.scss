@@ -3,6 +3,16 @@
 @use "../../styles/partials/mixin" as *; 
 
 .footer{
+    &__top-section{
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 2rem;
+        padding: 1rem;
+        @include tablet{
+            flex-direction: row;
+            justify-content: space-between;
+        }
+    }
     &__copy-section{
         background-color: $color-primary;
         padding-block: 1rem;
@@ -17,5 +27,41 @@
         font-size: 0.75rem;
         font-family: Outfit, sans-serif;
         font-weight: 400;
+    }
+    &__top-div{
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        @include tablet{
+            flex-direction: row;
+            justify-content: space-between;
+            width:50%;
+        }
+    }
+    &__header{
+        margin-bottom: 1rem;
+        color: $color-primary;
+        font-family: Outfit, sans-serif;
+    }
+    &__p{
+        font-family: Roboto, sans-serif;
+        font-size: 0.875rem;
+        margin-bottom: 1rem;
+    }
+    &__menu{
+        display: flex;
+        flex-direction: row-reverse;
+        gap: 1rem;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        @include tablet{
+            flex-direction: column;
+        }
+    }
+    &__item{
+        font-family: Outfit, sans-serif;
+        color: $color-primary;
+        margin-bottom: 1rem;
+        cursor: pointer;
     }
 }

@@ -1,0 +1,21 @@
+@use "../../styles/partials/typography" as *; 
+@use "../../styles/partials/variables" as *; 
+@use "../../styles/partials/mixin" as *; 
+
+.footer{
+    &__copy-section{
+        background-color: $color-primary;
+        padding-block: 1rem;
+        text-align: center;
+        @include tablet{
+            text-align: start;
+            padding-left: 1rem;
+        }
+    }
+    &__copy{
+        color: $color-tertiary;
+        font-size: 0.75rem;
+        font-family: Outfit, sans-serif;
+        font-weight: 400;
+    }
+}

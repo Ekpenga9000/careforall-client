@@ -1,0 +1,63 @@
+@use "../../styles/partials/mixin" as *;
+@use "../../styles/partials/typography" as *;
+@use "../../styles/partials/variables" as *;
+
+.tiles {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &__container {
+    min-height: 60vh;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    @include tablet {
+      height: 60vh;
+      flex-direction: row;
+    }
+    &--reverse{
+        @extend .tiles__container; 
+        @include tablet {
+            flex-direction: row-reverse;
+          }
+    }
+  }
+  &__img-div {
+    height: 100%;
+  }
+  &__msg-div {
+    display: flex;
+    width: 50%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+  &__icon-div {
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%;
+    padding: 0.3rem;
+    background-color: $color-primary;
+  }
+  &__h3 {
+    color: #40322e;
+    font-family: Outfit;
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin-bottom: 2rem;
+  }
+  &__p {
+    color: #40322e;
+    word-wrap: break-word;
+    font-family: Roboto;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+}

@@ -1,0 +1,19 @@
+@use "../../styles/partials/variables" as *;
+
+.img {
+  height: 100%;
+  width: 100%;
+  &--blur{
+    background-color: #f0eeee;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    font-size: 2rem; 
+    color: $color-tertiary;
+    @extend .img; 
+  }
+  &--clear{
+    @extend .img;
+    object-fit: cover;
+  }
+}

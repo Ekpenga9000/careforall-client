@@ -1,6 +1,7 @@
 import { ReactElement, FC } from "react";
 import "./Contact.scss";
 import imgUrl from "../../assets/images/careforall4.jpg";
+import ImageComponent from "../imageComponent/ImageComponent";
 
 const Contact: FC = (): ReactElement => {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
@@ -11,11 +12,9 @@ const Contact: FC = (): ReactElement => {
     <section className="contact">
       <div className="contact__container">
         <div className="contact__img-div">
-          <img
-            src={imgUrl}
+          <ImageComponent
+            imgUrl={imgUrl}
             alt="A girl holding paper, being supervised by a woman."
-            className="contact__img"
-            loading="lazy"
           />
         </div>
         <div className="contact__form-div">

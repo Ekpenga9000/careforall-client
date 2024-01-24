@@ -17,4 +17,10 @@
             width: $desktop-screen-size;
         }
     }
+    &__tile-div{
+        height: 150vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
 }

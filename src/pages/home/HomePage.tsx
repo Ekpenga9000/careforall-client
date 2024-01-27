@@ -10,6 +10,7 @@ import icon2 from "../../assets/icons/donationIcon.png";
 import Footer from '../../components/footer/Footer';
 import Contact from '../../components/contact-form/Contact';
 import Tiles, { TilesProps } from '../../components/tiles/Tiles';
+import CTA from '../../components/cta/CTA';
 const HomePage: FC = (): ReactElement => {
 
   const imageObj1 = {
@@ -54,9 +55,10 @@ const HomePage: FC = (): ReactElement => {
         <section className='homepage__tile-div'>
         <Tiles {...tilesProps1} />
         <Tiles {...tilesProps2} />
+        <CTA/>
         </section>
         <Contact/>
-        <Footer/>
+        {/* <Footer/> */}
           </div>
     </section>
   )

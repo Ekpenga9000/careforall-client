@@ -8,8 +8,8 @@
     align-items: center;
     padding-bottom: 1rem;
     &__container{
-        height: 91vh;
-        overflow-y: scroll;
+        // height: 91vh;
+        // overflow-y: scroll;
         @include tablet{
             width: $tablet-screen-size;
         }
@@ -18,7 +18,7 @@
         }
     }
     &__tile-div{
-        height: 150vh;
+        height: 200vh;
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;

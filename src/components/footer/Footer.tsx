@@ -4,6 +4,7 @@ import "./Footer.scss";
 const Footer: FC = (): ReactElement => {
   return (
     <footer className="footer">
+      <div className="footer__container">
       <section className="footer__top-section">
         <div className="footer__top-div">
           <div>
@@ -31,6 +32,7 @@ const Footer: FC = (): ReactElement => {
           © 2024 Care For All | All Rights Reserved.
         </p>
       </section>
+      </div>
     </footer>
   );
 };

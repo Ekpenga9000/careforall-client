@@ -3,6 +3,19 @@
 @use "../../styles/partials/mixin" as *; 
 
 .footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &__container{
+        // height: 91vh;
+        // overflow-y: scroll;
+        @include tablet{
+            width: $tablet-screen-size;
+        }
+        @include desktop{
+            width: $desktop-screen-size;
+        }
+    }
     &__top-section{
         display: flex;
         flex-direction: column-reverse;

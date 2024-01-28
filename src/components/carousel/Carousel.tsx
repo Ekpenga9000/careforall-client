@@ -48,8 +48,8 @@ const Carousel: FC<{ cards?: CardProps[] }> = ({
 
   return (
     <div className="carousel">
-      <div className="flex flex-wrap">
-      {/* <Slider {...settings}> */}
+      {/* <div className="flex flex-wrap"> */}
+      <Slider {...settings}>
         {cards.map((card) => {
           return (
             <div>
@@ -63,8 +63,8 @@ const Carousel: FC<{ cards?: CardProps[] }> = ({
             </div>
           );
         })}
-      {/* </Slider> */}
-      </div>
+      </Slider>
+      {/* </div> */}
     </div>
   );
 };

@@ -6,6 +6,7 @@ import heroImg from "../../assets/images/careforall1.png";
 const Hero: FC = (): ReactElement => {
   const comp = useRef(null); 
   const headerH1 = useRef(null); 
+  const btnHero = useRef(null);
   const heroImgDiv = useRef(null);
   const headerH3 = useRef(null); 
 
@@ -13,14 +14,20 @@ const Hero: FC = (): ReactElement => {
     let ctx = gsap.context(() => { 
       gsap.from(headerH1.current, {
         duration: 1,
-        opacity: 0.5,
-        x: -25,
+        opacity: 0,
+        y: 5,
+        ease: "power1.in"
+      }); 
+      gsap.from(btnHero.current, {
+        duration: 1,
+        opacity: 0,
+        y: 5,
         ease: "power1.in"
       }); 
       gsap.from(heroImgDiv.current, {
         duration: 1,
-        opacity: 0.5,
-        y: 1,
+        opacity: 0,
+        x: 5,
         ease: "power1.in"
       });
       gsap.from(headerH3.current, {
@@ -42,7 +49,7 @@ const Hero: FC = (): ReactElement => {
             "Empowering Lives: Inclusive Support Services for Individuals with
             Disabilities"
           </h1>
-          <div className="hero__btn-div">
+          <div className="hero__btn-div" ref={btnHero}>
             <button className="hero__btn">Join the community</button>
           </div>
         </div>

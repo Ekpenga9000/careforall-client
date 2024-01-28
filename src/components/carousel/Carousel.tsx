@@ -1,25 +1,23 @@
 import { ReactElement, FC } from "react";
 import Card from "../card/Card";
+import "./Carousel.scss";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { CardProps } from "../interfaces/Card";
 
-interface CarouselProps {
-  cards: {
-    imgUrl: string;
-    alt: string;
-    header: string;
-    text: string;
-  }[];
-}
-const Carousel: FC<CarouselProps> = (props): ReactElement => {
-  const { cards } = props;
+const Carousel: FC<{ cards?: CardProps[] }> = ({
+  cards = [],
+}): ReactElement => {
   const settings = {
     dots: true,
     infinite: true,
-    speed: 500,
+    speed: 700,
     slidesToShow: 3,
     slidesToScroll: 2,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    pauseOnHover: true,
     responsive: [
       {
         breakpoint: 1024,
@@ -49,18 +47,25 @@ const Carousel: FC<CarouselProps> = (props): ReactElement => {
   };
 
   return (
-    <Slider {...settings}>
-      {cards.map((card, index) => (
-        <div key={index}>
-          <Card
-            imgUrl={card.imgUrl}
-            alt={card.alt}
-            header={card.header}
-            text={card.text}
-          />
-        </div>
-      ))}
-    </Slider>
+    <div className="carousel">
+      <div className="flex flex-wrap">
+      {/* <Slider {...settings}> */}
+        {cards.map((card) => {
+          return (
+            <div>
+              <Card
+                key={card.id}
+                imgUrl={card.imgUrl}
+                alt={card.alt}
+                header={card.header}
+                text={card.text}
+              />
+            </div>
+          );
+        })}
+      {/* </Slider> */}
+      </div>
+    </div>
   );
 };
 

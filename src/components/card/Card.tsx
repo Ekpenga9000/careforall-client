@@ -1,15 +1,9 @@
 import { ReactElement, FC } from 'react';
 import "./Card.scss"; 
-
-interface CardProps{
-    imgUrl: string,
-    alt: string, 
-    header: string, 
-    text:string
-}
+import { CardProps } from '../interfaces/Card';
 
 const Card: FC<CardProps> = (props): ReactElement => {
-    const { imgUrl, alt, header, text } = props; 
+    const { imgUrl, alt, header, text} = props; 
 
   return (
       <div className='card'>

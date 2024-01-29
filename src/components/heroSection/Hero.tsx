@@ -7,34 +7,30 @@ const Hero: FC = (): ReactElement => {
   const comp = useRef(null); 
   const headerH1 = useRef(null); 
   const btnHero = useRef(null);
-  const heroImgDiv = useRef(null);
   const headerH3 = useRef(null); 
+
 
   useLayoutEffect(() => {
     let ctx = gsap.context(() => { 
       gsap.from(headerH1.current, {
         duration: 1,
         opacity: 0,
-        y: 5,
-        ease: "power1.in"
+        y: -50,
+        x:-50,
+        ease: "power1.inOut"
       }); 
       gsap.from(btnHero.current, {
         duration: 1,
         opacity: 0,
-        y: 5,
-        ease: "power1.in"
-      }); 
-      gsap.from(heroImgDiv.current, {
-        duration: 1,
-        opacity: 0,
-        x: 5,
-        ease: "power1.in"
+        y: 50,
+        x:-50,
+        ease: "power1.inOut"
       });
       gsap.from(headerH3.current, {
         duration: 1,
         opacity: 0.5,
-        y: 5,
-        ease: "power1.in"
+        y: 50,
+        ease: "power1.inOut"
       });
     }, comp); 
 
@@ -53,7 +49,7 @@ const Hero: FC = (): ReactElement => {
             <button className="hero__btn">Join the community</button>
           </div>
         </div>
-        <div className="hero__img-div" ref={heroImgDiv}>
+        <div className="hero__img-div">
           <img
             src={heroImg}
             alt="Woman holding a special boy and man smiling with them"

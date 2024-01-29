@@ -1,7 +1,7 @@
 import { FC, ReactElement } from "react";
 import "./HomePage.scss";
 import Hero from "../../components/heroSection/Hero";
-import Carousel from '../../components/carousel/Carousel';
+// import Carousel from '../../components/carousel/Carousel';
 import { data } from '../../assets/data/data';
 import photo1 from "../../assets/images/careforall2.jpg";
 import photo2 from "../../assets/images/careforall3.jpg";
@@ -10,6 +10,7 @@ import icon2 from "../../assets/icons/donationIcon.png";
 import Contact from "../../components/contact-form/Contact";
 import Tiles, { TilesProps } from "../../components/tiles/Tiles";
 import CTA from "../../components/cta/CTA";
+import CarouselDemo from "../../components/carouselDemo/CarouselDemo";
 const HomePage: FC = (): ReactElement => {
   const imageObj1 = {
     src: photo1,
@@ -49,7 +50,9 @@ const HomePage: FC = (): ReactElement => {
     <section className="homepage">
       <div className="homepage__container">
         <Hero />
-        <Carousel cards={data} />
+        <div className="homepage__carousel">
+        <CarouselDemo cards={data} />
+        </div>
         <section className="homepage__tile-div">
           <Tiles {...tilesProps1} />
           <Tiles {...tilesProps2} />

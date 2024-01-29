@@ -27,12 +27,12 @@ const Footer: FC = (): ReactElement => {
           <p className="footer__item">About us</p>
         </div>
       </section>
+      </div>
       <section className="footer__copy-section">
         <p className="footer__copy">
           © 2024 Care For All | All Rights Reserved.
         </p>
       </section>
-      </div>
     </footer>
   );
 };

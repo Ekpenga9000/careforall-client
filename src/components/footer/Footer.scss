@@ -4,6 +4,7 @@
 
 .footer{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     &__container{
@@ -28,18 +29,22 @@
     }
     &__copy-section{
         background-color: $color-primary;
-        padding-block: 1rem;
-        text-align: center;
-        @include tablet{
-            text-align: start;
-            padding-left: 1rem;
-        }
+        width: 100vw;
+        padding: 1rem;
+        display: flex;
+        justify-content: center;
     }
     &__copy{
         color: $color-tertiary;
         font-size: 0.75rem;
         font-family: Outfit, sans-serif;
         font-weight: 400;
+        @include tablet{
+            width: $tablet-screen-size;
+        }
+        @include desktop{
+            min-width: $desktop-screen-size;
+        }
     }
     &__top-div{
         display: flex;

@@ -17,6 +17,10 @@
             width: $desktop-screen-size;
         }
     }
+    &__carousel{
+        height: 25vh;
+        margin-top: 1rem;
+    }
     &__tile-div{
         height: 200vh;
         display: flex;

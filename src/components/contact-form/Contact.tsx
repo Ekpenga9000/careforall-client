@@ -4,31 +4,29 @@ import imgUrl from "../../assets/images/careforall4.jpg";
 import ImageComponent from "../imageComponent/ImageComponent";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-gsap.registerPlugin(ScrollTrigger); 
+gsap.registerPlugin(ScrollTrigger);
 
 const Contact: FC = (): ReactElement => {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
   };
 
-  const comp = useRef(null); 
-  const contactDiv = useRef(null); 
+  const comp = useRef(null);
+  const contactDiv = useRef(null);
 
-  useLayoutEffect(() => { 
-    let ctx = gsap.context(() => { 
-
+  useLayoutEffect(() => {
+    let ctx = gsap.context(() => {
       gsap.from(contactDiv.current, {
         duration: 1,
         y: 50,
         opacity: 0,
         scrollTrigger: contactDiv.current,
-        ease: "power1.inOut"
+        ease: "power1.inOut",
       });
+    }, comp);
 
-    }, comp); 
-
-    return () => ctx.revert(); 
-  }, []); 
+    return () => ctx.revert();
+  }, []);
 
   return (
     <section className="contact" ref={comp}>
@@ -43,10 +41,9 @@ const Contact: FC = (): ReactElement => {
           <form onSubmit={handleSubmit} className="contact__form">
             <h3 className="contact__h3">Talk to Care For All</h3>
             <p className="contact__p">
-              We're here to explore how we can best support you. Your
-              confidential request and information will be securely directed to
-              Care For All client services, and our team will reach out to you
-              in the coming days.
+              We're here to support you. Your confidential request will be
+              directed to Care For All client services, and our team will reach
+              out to you soon.
             </p>
             <div className="contact__input-div">
               <input
@@ -68,19 +65,43 @@ const Contact: FC = (): ReactElement => {
                 className="contact__input"
               />
             </div>
-            <div className="contact__checkbox-div">
+            <div>
               <h4 className="contact__h4">
                 I'm Seeking any of these Services:
               </h4>
-              <input
-                type="checkbox"
-                name="homeservice"
-                id="homeservice"
-                className="contact__checkbox"
-              />
-              <label htmlFor="homeservice" className="contact__label">
-                Home Service Support
-              </label>
+              <div className="contact__checkbox-div">
+                <input
+                  type="checkbox"
+                  name="homeservice"
+                  id="homeservice"
+                  className="contact__checkbox"
+                />
+                <label htmlFor="homeservice" className="contact__label">
+                  Home Service Support
+                </label>
+              </div>
+              <div className="contact__checkbox-div">
+                <input
+                  type="checkbox"
+                  name="vistationservice"
+                  id="vistationservice"
+                  className="contact__checkbox"
+                />
+                <label htmlFor="vistationservice" className="contact__label">
+                  Visitation Services
+                </label>
+              </div>
+              <div className="contact__checkbox-div">
+                <input
+                  type="checkbox"
+                  name="skilldevelopment"
+                  id="skilldevelopment"
+                  className="contact__checkbox"
+                />
+                <label htmlFor="skilldevelopment" className="contact__label">
+                  Skill Development
+                </label>
+              </div>
             </div>
             <div>
               <button className="contact__btn">Submit</button>

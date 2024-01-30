@@ -11,6 +11,7 @@ import Contact from "../../components/contact-form/Contact";
 import Tiles, { TilesProps } from "../../components/tiles/Tiles";
 import CTA from "../../components/cta/CTA";
 import CarouselDemo from "../../components/carouselDemo/CarouselDemo";
+import CardList from "../../components/cardList/CardList";
 const HomePage: FC = (): ReactElement => {
   const imageObj1 = {
     src: photo1,
@@ -51,7 +52,8 @@ const HomePage: FC = (): ReactElement => {
       <div className="homepage__container">
         <Hero />
         <div className="homepage__carousel">
-        <CarouselDemo cards={data} />
+          <CardList cards={data}/>
+        {/* <CarouselDemo cards={data} /> */}
         </div>
         <section className="homepage__tile-div">
           <Tiles {...tilesProps1} />

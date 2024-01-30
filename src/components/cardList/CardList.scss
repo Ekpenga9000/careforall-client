@@ -1,0 +1,12 @@
+@use "../../styles/partials/mixin" as *;
+
+.cardList{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    @include tablet{
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+    }
+}

@@ -25,7 +25,7 @@ const CarouselDemo: FC<{ cards?: CardProps[] }> = ({
           width: "100%",
           padding: "1.5rem",
         }}
-        slidesPerView={3}
+        slidesPerView={1}
         autoplay={true}
         speed={1000}
         spaceBetween={1}

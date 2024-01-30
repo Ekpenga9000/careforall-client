@@ -8,8 +8,12 @@
     border-radius: 0.625rem;
     padding: 1rem;
     background-color:$color-tertiary;
-    // display: flex;
-    // justify-content: center;
+    @include tablet{
+        width: 45%;
+    }
+    @include desktop{
+        width: 22%;
+    }
     &__container{
         display: flex;
         justify-content: center;
@@ -24,6 +28,9 @@
         font-family: Outfit, sans-serif;
         font-weight: 500;
         margin-bottom: 0.5rem;
+        @include desktop{
+            font-size: 1.2rem;
+        }
     }
     &__p{
         font-family: Roboto, sans-serif;

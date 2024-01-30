@@ -82,4 +82,11 @@
         margin-bottom: 1rem;
         cursor: pointer;
     }
+    &__icon-link{
+        text-decoration: none;
+    }
+    &__icon{
+        font-size: 1.5rem;
+        color: $color-primary;
+    }
 }

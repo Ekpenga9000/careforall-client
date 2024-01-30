@@ -41,7 +41,7 @@ const Contact: FC = (): ReactElement => {
         </div>
         <div className="contact__form-div">
           <form onSubmit={handleSubmit} className="contact__form">
-            <h2 className="contact__h2">Talk to Care For All</h2>
+            <h3 className="contact__h3">Talk to Care For All</h3>
             <p className="contact__p">
               We're here to explore how we can best support you. Your
               confidential request and information will be securely directed to
@@ -82,7 +82,9 @@ const Contact: FC = (): ReactElement => {
                 Home Service Support
               </label>
             </div>
-            <button className="contact__btn">Submit</button>
+            <div>
+              <button className="contact__btn">Submit</button>
+            </div>
           </form>
         </div>
       </div>

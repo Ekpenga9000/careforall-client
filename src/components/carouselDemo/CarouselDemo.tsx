@@ -20,8 +20,8 @@ const CarouselDemo: FC<{ cards?: CardProps[] }> = ({
       <div className="">
       <Swiper
         style={{
-          "--swiper-navigation-color": "#E23664",
-          "--swiper-pagination-color": "#E23664",
+          // "--swiper-navigation-color": "#E23664",
+          // "--swiper-pagination-color": "#E23664",
           width: "100%",
           padding: "1.5rem",
         }}

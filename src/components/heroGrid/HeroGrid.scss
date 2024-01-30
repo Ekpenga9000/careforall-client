@@ -1,10 +1,16 @@
+@use "../../styles/partials/mixin" as *;
+@use "../../styles/partials/variables" as *;
+
 .heroGrid{
     height: 100%;
     display: flex;
-    justify-content: end;
+    justify-content: center;
     align-items: center;
+    @include desktop{
+        justify-content: end;
+        align-items: center;
+    }
     &__layout{
-        // border: 1px solid red;
         height: 80%;
         width: 80%;
         display: grid;

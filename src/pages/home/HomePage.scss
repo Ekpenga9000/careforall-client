@@ -20,11 +20,13 @@
     &__carousel{
         height: 25vh;
         margin-top: 1rem;
+        width: 100%;
+        overflow-x: clip;
     }
     &__tile-div{
-        height: 200vh;
+        margin-block: 2rem;
         display: flex;
         flex-direction: column;
-        justify-content: space-evenly;
+        // justify-content: space-evenly;
     }
 }

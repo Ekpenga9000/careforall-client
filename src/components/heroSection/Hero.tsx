@@ -1,7 +1,9 @@
 import { FC, ReactElement, useLayoutEffect, useRef } from "react";
 import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import "./Hero.scss";
-import heroImg from "../../assets/images/careforall1.png";
+import HeroGrid from "../heroGrid/HeroGrid";
+gsap.registerPlugin(ScrollTrigger);
 
 const Hero: FC = (): ReactElement => {
   const comp = useRef(null); 
@@ -30,6 +32,7 @@ const Hero: FC = (): ReactElement => {
         duration: 1,
         opacity: 0.5,
         y: 50,
+        scrollTrigger:headerH3.current,
         ease: "power1.inOut"
       });
     }, comp); 
@@ -50,11 +53,7 @@ const Hero: FC = (): ReactElement => {
           </div>
         </div>
         <div className="hero__img-div">
-          <img
-            src={heroImg}
-            alt="Woman holding a special boy and man smiling with them"
-            className="hero__img"
-          />
+          <HeroGrid/>
         </div>
       </div>
       <div className="hero__bottom">

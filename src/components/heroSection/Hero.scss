@@ -4,10 +4,11 @@
 
 .hero {
   &__top {
+    height: 100vh;
     display: flex;
     flex-direction: column-reverse;
     align-items: center;
-    @include tablet {
+    @include desktop{
       flex-direction: row;
       justify-content: space-between;
     }

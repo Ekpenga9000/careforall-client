@@ -1,0 +1,39 @@
+.heroGrid{
+    height: 100%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    &__layout{
+        // border: 1px solid red;
+        height: 80%;
+        width: 80%;
+        display: grid;
+        grid-template-areas:
+        "side side top"
+        "side side top"
+        "middle bottom bottom"
+        "middle bottom bottom"
+        ; 
+        gap: 0.5rem;
+        border-radius: 1rem;
+        overflow: clip;
+    }
+    &__side{
+        grid-area: side;
+    }
+    &__top{
+        grid-area: top;
+    }
+    &__middle{
+        grid-area: middle;
+    }
+    &__bottom{
+        grid-area: bottom;
+    }
+    &__img{
+        height: 100%;
+        width: 100%;
+        object-position: center;
+        object-fit: cover;
+    }
+}

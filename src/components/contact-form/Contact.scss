@@ -28,16 +28,12 @@
     }
   }
   &__img-div{
-      @include desktop{
+    height: 90vh;
+    width: 90vw;
+      @include tablet{
           height: 100%;
           width: 100%;
         }
-    }
-    &__img{
-        height: 100%;
-        width: 100%;
-        object-fit: cover;
-        object-position: center;
     }
     &__h2 {
         color: $text-primary;

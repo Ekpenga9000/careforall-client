@@ -1,16 +1,38 @@
-import { ReactElement, FC } from "react";
+import { ReactElement, FC, useRef, useLayoutEffect } from "react";
 import "./Contact.scss";
 import imgUrl from "../../assets/images/careforall4.jpg";
 import ImageComponent from "../imageComponent/ImageComponent";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger); 
 
 const Contact: FC = (): ReactElement => {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
   };
 
+  const comp = useRef(null); 
+  const contactDiv = useRef(null); 
+
+  useLayoutEffect(() => { 
+    let ctx = gsap.context(() => { 
+
+      gsap.from(contactDiv.current, {
+        duration: 1,
+        y: 50,
+        opacity: 0,
+        scrollTrigger: contactDiv.current,
+        ease: "power1.inOut"
+      });
+
+    }, comp); 
+
+    return () => ctx.revert(); 
+  }, []); 
+
   return (
-    <section className="contact">
-      <div className="contact__container">
+    <section className="contact" ref={comp}>
+      <div className="contact__container" ref={contactDiv}>
         <div className="contact__img-div">
           <ImageComponent
             imgUrl={imgUrl}

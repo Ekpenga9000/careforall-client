@@ -29,8 +29,7 @@
     height: 50vh;
     width: 80vw;
     @include tablet{
-      height: 50vh;
-      width: 40vw;
+      width:50%;
     }
   }
   &__msg-div {

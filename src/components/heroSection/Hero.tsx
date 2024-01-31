@@ -11,8 +11,8 @@ const Hero: FC = (): ReactElement => {
   const btnHero = useRef(null);
   const headerH3 = useRef(null); 
 
-
   useLayoutEffect(() => {
+
     let ctx = gsap.context(() => { 
       gsap.from(headerH1.current, {
         duration: 1,
@@ -36,7 +36,7 @@ const Hero: FC = (): ReactElement => {
         ease: "power1.inOut"
       });
     }, comp); 
-
+  
     return () => ctx.revert();
    }, []);
 

@@ -5,7 +5,11 @@ import grid2 from "../../assets/images/cfa-grid-2.jpg";
 import grid4 from "../../assets/images/cfa-grid-4.jpg"; 
 import grid3 from "../../assets/images/cfa-grid-3.jpg"; 
 
+
 const HeroGrid: FC = (): ReactElement => {
+
+
+
   return (
     <div className="heroGrid">
       <div className="heroGrid__layout">

@@ -1,5 +1,6 @@
 export interface CardProps{
-    id?:number, 
+    id?: number, 
+    ref?: HTMLDivElement |null,
     imgUrl: string,
     alt: string, 
     header: string, 

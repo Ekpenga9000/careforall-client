@@ -102,6 +102,17 @@ const Contact: FC = (): ReactElement => {
                   Skill Development
                 </label>
               </div>
+              <div className="contact__checkbox-div">
+                <input
+                  type="checkbox"
+                  name="others"
+                  id="others"
+                  className="contact__checkbox"
+                />
+                <label htmlFor="others" className="contact__label">
+                  Others
+                </label>
+              </div>
             </div>
             <div>
               <button className="contact__btn">Submit</button>

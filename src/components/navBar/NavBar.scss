@@ -78,6 +78,10 @@
       @include menu-items;
     }
   }
+  &__link{
+    text-decoration: none;
+    color: $text-primary;
+  }
   &__icon-div{
     @include desktop{
       display: none;

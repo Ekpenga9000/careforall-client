@@ -24,7 +24,7 @@ export const data:CardProps[] = [
         imgUrl: skillBuilding,
         alt: "A pencil and a wrench", 
         header: "Skill Development", 
-        text:"We empower individuals with special needs through tailored skill development, fostering opportunities for meaningful employment."
+        text:"We provide teaching classes for musical instruments , sports , picture editing and arts & crafts."
     },
     {
         id:4, 

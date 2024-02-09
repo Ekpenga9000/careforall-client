@@ -19,7 +19,7 @@ const Footer: FC = (): ReactElement => {
           <div>
             <h4 className="footer__header">Contact</h4>
             <p className="footer__p">Phone: (519) 697-3683 </p>
-              <p className="footer__p">Email: abasstijani@careforall.ca</p>
+              <a className="footer__p" href={`mailto:abasstijani@careforall.ca`}>Email: abasstijani@careforall.ca</a>
               <div>
                 <a href="https://www.instagram.com/careforall.ca/" target="blank" className="footer__icon-link">
                   <FaInstagram className="footer__icon"/>

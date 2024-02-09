@@ -1,0 +1,41 @@
+@use "../../styles/partials/mixin" as *;
+@use "../../styles/partials/typography" as *;
+@use "../../styles/partials/variables" as *;
+
+.about-hero{
+    height: 70vh;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    margin-bottom: 1rem;
+    @include tablet{
+        flex-direction: row;
+    }
+    &__div{
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-inline: 1rem;
+        @include tablet{
+            align-items: start;
+            padding-inline: 0;
+        }
+        @include desktop{
+            width: 60%;
+        }
+    }
+    &__img-div{
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &__text{
+        font-family: "Roboto", sans-serif;
+        color: $text-primary;
+    }
+}

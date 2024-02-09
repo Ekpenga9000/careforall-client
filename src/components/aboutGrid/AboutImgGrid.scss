@@ -1,0 +1,31 @@
+@use "../../styles/partials/mixin" as *;
+@use "../../styles/partials/typography" as *;
+@use "../../styles/partials/variables" as *;
+
+.about-img-grid{
+    height: 100%;
+    width:100%;
+    position: relative;
+    &__div{
+        &--large{
+            height: 70%;
+            width: 50%;
+            position: absolute;
+            right: 30px;
+            top: 10px;
+        }
+        &--small{
+            height: 45%;
+            width: 40%;
+            position: absolute;
+            bottom: 5px;
+            left: 12%;
+        }
+    }
+    &__img{
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+}

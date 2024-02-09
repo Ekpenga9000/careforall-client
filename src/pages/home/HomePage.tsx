@@ -56,7 +56,7 @@ const HomePage: FC = (): ReactElement => {
         <section className="homepage__tile-div">
           <Tiles {...tilesProps1} />
           <Tiles {...tilesProps2} />
-          <CTA />
+          <CTA msg = "Spread kindness with Care For All! Join us as a volunteer or ambassador, let's unite to create a positive impact together."/>
         </section>
         <Contact />
       </div>

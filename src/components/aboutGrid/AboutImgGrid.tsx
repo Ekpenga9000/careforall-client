@@ -1,12 +1,19 @@
-import { ReactElement, FC } from 'react';
+import { ReactElement, FC } from "react";
 import "./AboutImgGrid.scss";
-const AboutImgGrid:FC = ():ReactElement => {
-  return (
-      <div className='about-img-grid'>
-        <div className='about-img-grid__div--large'></div>
-        <div className='about-img-grid__div--small'></div>
-    </div>
-  )
-}
+import grid1 from "../../assets/images/cfa-grid-1.jpg"; 
+import grid2 from "../../assets/images/cfa-grid-2.jpg"; 
 
-export default AboutImgGrid
+const AboutImgGrid: FC = (): ReactElement => {
+  return (
+    <div className="about-img-grid">
+          <div className="about-img-grid__div--large">
+              <img src={ grid2 } alt="A young kid writing with a pencil" className="about-img-grid__img"/>
+      </div>
+          <div className="about-img-grid__div--small">
+              <img src={ grid1 } alt="A young kid with headphones on" className="about-img-grid__img"/>
+      </div>
+    </div>
+  );
+};
+
+export default AboutImgGrid;

@@ -1,0 +1,26 @@
+@use "../../styles/partials/mixin" as *;
+@use "../../styles/partials/typography" as *;
+@use "../../styles/partials/variables" as *;
+
+.vision{
+    background-color: $color-alternate;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &__container{
+        width: 80%;
+        text-align: center;
+        @include desktop{
+            width: 60%;
+        }
+    }
+    &__h3{
+        font-family: "Roboto", sans-serif;
+        color: $color-tertiary;
+    }
+    &__p{
+        font-family: "Roboto", sans-serif;
+        color: $color-tertiary;
+    }
+}

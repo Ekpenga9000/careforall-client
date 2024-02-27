@@ -11,7 +11,7 @@ const ServicesPage = () => {
     <section className="services">
           <div className="services__container">
               <div className="services__hero">
-                  <div>
+                  <div className="services__top">
                 <h1 className="services__heading">Our Services</h1>
                   <h2 className="services__title">We are happy to announce that we would be offering one month free counselling sessions for our clients who signs up with us. </h2>
                   <Link to={"/waitlist"} className="services__btn">Join the waitlist</Link>

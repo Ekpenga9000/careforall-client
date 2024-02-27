@@ -16,8 +16,22 @@
     }
     &__hero{
         padding: 2rem 1rem;
+        margin-bottom: 1rem;
         background-color: $color-alternate;
-        text-align: center;
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        @include tablet{
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+    &__heading{
+        color: $color-secondary;
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
     }
     &__title{
         color: $color-secondary;
@@ -35,6 +49,27 @@
         &:hover{
             background-color: $color-secondary;
             color: $color-primary;
+        }
+    }
+    &__img-div{
+        width: 100%;
+        height: 300px;
+        margin-bottom: 1rem;
+        border-radius:0.75rem;
+        @include tablet{
+            width: 50%;
+            height: 50vh;
+        }
+    }
+    &__img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius:0.75rem;
+    }
+    &__top{
+        @include tablet{
+            width: 50%;
         }
     }
 }

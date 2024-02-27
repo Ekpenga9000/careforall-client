@@ -3,6 +3,13 @@ import homeIcon from "../icons/homeIcon.png";
 import inclusiveIcon from "../icons/communityIcon.png"; 
 import skillBuilding from "../icons/skills.png";
 import community from "../images/careforall3.jpg";
+import counsellingImg from "../images/counsellingImg.jpg";
+import skillsBuildingImg from "../images/skillsDevelopmentImg.jpg";
+import homeServiceSupportImg from "../images/cfa-grid-1.jpg";
+import homeIconAlt from "../icons/homeIcon-alt.png";
+import communityIconAlt from "../icons/communityIcon-alt.png";
+import counsellingIconAlt from "../icons/counsellingIcon-alt.png";
+import skillsAlt from "../icons/skills-alt.png";
 import { CardProps } from "../../components/interfaces/interface";
 import { TilesProps } from "../../components/interfaces/interface";
 
@@ -41,12 +48,12 @@ export const tiles: TilesProps[] = [
     {
       id: 1,
       image: {
-        src: "image1.jpg",
+        src: counsellingImg,
         alt: "Professional Counselling Image"
       },
       icon: {
-        src: "icon1.png",
-        alt: "Professional Counselling Icon"
+        src: counsellingIconAlt,
+        alt: "Two people communicating over a table."
       },
       header: "Professional Counselling",
       text: "We provide access to professional counseling services delivered by seasoned counselors boasting extensive experience and expertise. Our licensed counselors offer professional guidance, empowering individuals to lead happier, healthier lives.",
@@ -55,12 +62,12 @@ export const tiles: TilesProps[] = [
     {
       id: 2,
       image: {
-        src: "image2.jpg",
+        src: homeServiceSupportImg,
         alt: "Home Service Support Image"
       },
       icon: {
-        src: "icon2.png",
-        alt: "Home Service Support Icon"
+        src: homeIconAlt,
+        alt: "Home icon"
       },
       header: "Home Service Support",
       text: "We offer compassionate home-based assistance, delivering tailored care and support in the comforting embrace of familiar surroundings.",
@@ -69,12 +76,12 @@ export const tiles: TilesProps[] = [
     {
       id: 3,
       image: {
-        src: "image3.jpg",
-        alt: "Skill Development Image"
+        src: skillsBuildingImg,
+        alt: "Child learning to play to draw with a pencil."
       },
       icon: {
-        src: "icon3.png",
-        alt: "Skill Development Icon"
+        src: skillsAlt,
+        alt: "Pencil and Wrench Icon"
       },
       header: "Skill Development",
       text: "We provide teaching classes for musical instruments, sports, picture editing, and arts & crafts.",
@@ -84,10 +91,10 @@ export const tiles: TilesProps[] = [
       id: 4,
       image: {
         src: community,
-        alt: "Inclusive Haven Image"
+        alt: "Network of people connected together."
       },
       icon: {
-        src: "icon4.png",
+        src: communityIconAlt,
         alt: "Inclusive Haven Icon"
       },
       header: "Inclusive Haven",

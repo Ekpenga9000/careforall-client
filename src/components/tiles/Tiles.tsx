@@ -2,21 +2,10 @@ import { ReactElement, FC, useRef, useLayoutEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import "./Tiles.scss";
+import { TilesProps } from "../interfaces/interface";
 import ImageComponent from "../imageComponent/ImageComponent";
 gsap.registerPlugin(ScrollTrigger);
 
-type imgObj = {
-  src: string,
-  alt: string,
-};
-
-export interface TilesProps {
-  image: imgObj,
-  icon: imgObj,
-  header: string,
-  text: string,
-  isReverse: boolean,
-}
 
 const Tiles: FC<TilesProps> = (props): ReactElement => {
   const comp = useRef(null); 

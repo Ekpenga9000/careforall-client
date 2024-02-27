@@ -1,5 +1,5 @@
 import { ReactElement, FC } from 'react'; 
-import { CardProps } from '../interfaces/Card';
+import { CardProps } from '../interfaces/interface';
 import Card from '../card/Card';
 import "./CardList.scss";
 

@@ -1,0 +1,40 @@
+@use "../../styles/partials/mixin" as *; 
+@use "../../styles/partials/variables" as *; 
+@use "../../styles/partials/typography" as *; 
+
+.services{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &__container{
+        @include tablet{
+            width: $tablet-screen-size;
+        }
+        @include desktop{
+            width: $desktop-screen-size;
+        }
+    }
+    &__hero{
+        padding: 2rem 1rem;
+        background-color: $color-alternate;
+        text-align: center;
+    }
+    &__title{
+        color: $color-secondary;
+        font-size: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+    &__btn{
+        background-color: $color-secondary;
+        color: $color-primary;
+        padding: 0.5rem 1rem;
+        border: none;
+        border-radius: 5px;
+        text-decoration: none;
+        transition: 0.4s ease;
+        &:hover{
+            background-color: $color-secondary;
+            color: $color-primary;
+        }
+    }
+}

@@ -59,18 +59,18 @@ const NavBar: FC = (): ReactElement => {
         </div>
 
        {isSliderActive && <ul className="nav__menu--mobile" ref={slider}>
-          <li className="nav__item--mobile">Services</li>
+          <li className="nav__item--mobile"><Link to={"/services"}>Services</Link></li>
           <li className="nav__item--mobile"><Link to={"/about"}>About us</Link></li>
-          <li className="nav__item--mobile">Events</li>
-          <li className="nav__item--mobile">Get Involved</li>
+          <li className="nav__item--mobile"><Link to={"/events"}>Events</Link></li>
+          <li className="nav__item--mobile"><Link to={"/careers"}>Get Involved</Link></li>
           <li className="nav__item--mobile">Community</li>
         </ul>}
 
         <ul className="nav__menu">
-          <li className="nav__item">Services</li>
+          <li className="nav__item"><Link to={"/services"} className="nav__link">Services</Link></li>
           <li className="nav__item"><Link to={"/about"} className="nav__link">About us</Link></li>
-          <li className="nav__item">Events</li>
-          <li className="nav__item">Get Involved</li>
+          <li className="nav__item"><Link to={"/events"} className="nav__link">Events</Link></li>
+          <li className="nav__item"><Link to={"/careers"} className="nav__link">Get Involved</Link></li>
           <li className="nav__item">Community</li>
         </ul>
       </nav>

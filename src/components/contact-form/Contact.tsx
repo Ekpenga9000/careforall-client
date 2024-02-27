@@ -72,23 +72,23 @@ const Contact: FC = (): ReactElement => {
               <div className="contact__checkbox-div">
                 <input
                   type="checkbox"
+                  name="counselling"
+                  id="counselling"
+                  className="contact__checkbox"
+                />
+                <label htmlFor="counselling" className="contact__label">
+                  Professional Counselling
+                </label>
+              </div>
+              <div className="contact__checkbox-div">
+                <input
+                  type="checkbox"
                   name="homeservice"
                   id="homeservice"
                   className="contact__checkbox"
                 />
                 <label htmlFor="homeservice" className="contact__label">
                   Home Service Support
-                </label>
-              </div>
-              <div className="contact__checkbox-div">
-                <input
-                  type="checkbox"
-                  name="vistationservice"
-                  id="vistationservice"
-                  className="contact__checkbox"
-                />
-                <label htmlFor="vistationservice" className="contact__label">
-                  Visitation Services
                 </label>
               </div>
               <div className="contact__checkbox-div">

@@ -6,6 +6,8 @@ import HomePage from './pages/home/HomePage';
 import Footer from './components/footer/Footer';
 import AboutPage from './pages/about/AboutPage';
 import ServicesPage from './pages/services/ServicesPage';
+import EventsPage from './pages/events/EventsPage';
+import CareersPage from './pages/careers/CareersPage';
 
 
 const App:FC = ():ReactElement => {
@@ -18,6 +20,8 @@ const App:FC = ():ReactElement => {
           <Route path='/' element={<HomePage/> } />
           <Route path='/about' element={<AboutPage/> } />
           <Route path='/services' element={<ServicesPage/> } />
+          <Route path='/events' element={<EventsPage/> } />
+          <Route path='/careers' element={<CareersPage/> } />
         </Routes>
         <Footer/>
       </BrowserRouter>

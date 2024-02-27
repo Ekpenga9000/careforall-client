@@ -1,6 +1,6 @@
 import { ReactElement, FC, useRef, useLayoutEffect } from 'react';
 import "./Card.scss"; 
-import { CardProps } from '../interfaces/Card';
+import { CardProps } from '../interfaces/interface';
 import gsap from 'gsap';
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);

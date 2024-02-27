@@ -1,23 +1,23 @@
+import counsellingIcon from "../icons/counsellingIcon.png";
 import homeIcon from "../icons/homeIcon.png";
 import inclusiveIcon from "../icons/communityIcon.png"; 
-import visitation from "../icons/visitation.png"; 
 import skillBuilding from "../icons/skills.png";
 import { CardProps } from "../../components/interfaces/Card";
 
 export const data:CardProps[] = [
     {
         id:1, 
+        imgUrl: counsellingIcon,
+        alt: "Two people communicating.", 
+        header: "Professional Counselling", 
+        text:"We enable secure access to professional counselling services."
+    }, 
+    {
+        id:2, 
         imgUrl: homeIcon,
         alt: "The picture of a home.", 
         header: "Home Service Support", 
         text:"We provide Home-Based Assistance, delivering compassionate care and support within the comfort of familiar surroundings."
-    }, 
-    {
-        id:2, 
-        imgUrl: visitation,
-        alt: "A Pin on a map", 
-        header: "Visitation Services", 
-        text:"Our services extend to escorting individuals with special needs during their visitation, ensuring a supportive and inclusive experience."
     },
     {
         id:3, 

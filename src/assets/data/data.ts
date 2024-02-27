@@ -2,6 +2,7 @@ import counsellingIcon from "../icons/counsellingIcon.png";
 import homeIcon from "../icons/homeIcon.png";
 import inclusiveIcon from "../icons/communityIcon.png"; 
 import skillBuilding from "../icons/skills.png";
+import community from "../images/careforall3.jpg";
 import { CardProps } from "../../components/interfaces/interface";
 import { TilesProps } from "../../components/interfaces/interface";
 
@@ -82,7 +83,7 @@ export const tiles: TilesProps[] = [
     {
       id: 4,
       image: {
-        src: "image4.jpg",
+        src: community,
         alt: "Inclusive Haven Image"
       },
       icon: {

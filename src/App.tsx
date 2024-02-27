@@ -5,6 +5,7 @@ import NavBar from './components/navBar/NavBar';
 import HomePage from './pages/home/HomePage';
 import Footer from './components/footer/Footer';
 import AboutPage from './pages/about/AboutPage';
+import ServicesPage from './pages/services/ServicesPage';
 
 
 const App:FC = ():ReactElement => {
@@ -16,6 +17,7 @@ const App:FC = ():ReactElement => {
         <Routes>
           <Route path='/' element={<HomePage/> } />
           <Route path='/about' element={<AboutPage/> } />
+          <Route path='/services' element={<ServicesPage/> } />
         </Routes>
         <Footer/>
       </BrowserRouter>

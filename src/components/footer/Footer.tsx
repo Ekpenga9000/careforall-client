@@ -43,7 +43,7 @@ const Footer: FC = (): ReactElement => {
                 </li>
                 <li className="footer__list">
                   <a
-                    href="https://www.instagram.com/careforall.ca/"
+                href="/"
                     target="blank"
                     className="footer__icon-link"
                   >

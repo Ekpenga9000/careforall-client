@@ -14,7 +14,50 @@
             width: $desktop-screen-size;
         }
     }
+    &__div{
+        background-color: $color-alternate;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        padding: 1rem;
+        margin-block: 2rem;
+        @include tablet{
+            flex-direction: row;
+            justify-content: space-between;
+        }
+    }
+    &__h1{
+        color: $color-secondary;
+        margin-bottom: 1.5rem;
+    }
     &__h3{
-        font-size: 1.2rem;
+        font-size: 1.1rem;
+    }
+    &__text{
+        color: $color-secondary;
+        font-size: 1.1rem;
+        margin-bottom: 1.5rem;
+    }
+    &__img-div{
+        width: 100%;
+        height: 70vh;
+        margin-bottom: 1rem;
+        border-radius:0.75rem;
+        @include tablet{
+            width: 50%;
+        }
+    }
+    &__img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius:0.75rem;
+    }
+    &__text-div{
+        @include tablet{
+            width: 40%;
+        }
     }
 }

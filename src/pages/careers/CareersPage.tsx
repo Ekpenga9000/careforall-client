@@ -1,34 +1,33 @@
 import "./CareersPage.scss";
+import career from "../../assets/images/careforall2.jpg";
 const CareersPage = () => {
   return (
     <section className="careers">
       <div className="careers__container">
-        <div>
-          <div>
+        <div className="careers__div">
+          <div className="careers__text-div">
             <h1 className="careers__h1">Careers</h1>
-            <p className="careers__h3">
-              Applications are considered on a regular basis for community
-              support worker , Disability support worker , Health care
-              aide & volunteers.
+            <p className="careers__text">
+              Join Care for All and embark on a fulfilling career in disability
+              services, where your work makes a meaningful difference in the
+              lives of those we support.
             </p>
           </div>
-          <div>
-            <h2>Our Culture</h2>
-            <p>
-              At Care For All, we are committed to fostering a culture of
-              inclusivity, respect, and integrity. We are dedicated to providing
-              comprehensive and accessible healthcare solutions that enhance the
-              quality of life for people with disabilities. Our team is
-              passionate about promoting independence, dignity, and holistic
-              wellness through innovative and person-centered care. We are
-              committed to collaboration, embracing diversity, and advocating
-              for the rights and health equity of individuals with disabilities.
-            </p>
+          <div className="careers__img-div">
+            <img
+              src={career}
+              alt="A man laughing with a boy with special needs."
+              className="careers__img"
+            />
           </div>
         </div>
 
-        <h2>Now Hiring!</h2>
+        <h2>We are Hiring!</h2>
 
+        <p className="careers__h3">
+          Applications are considered on a regular basis for community support
+          worker , Disability support worker , Health care aide & volunteers.
+        </p>
         <p>
           Are you passionate about making a meaningful impact in your community
           while gaining invaluable experience? Join our dynamic team as a
@@ -37,6 +36,18 @@ const CareersPage = () => {
           Support Worker, Disability Support Worker, Health Care Aide, as well
           as volunteers.
         </p>
+
+        <h3>Why work with us?</h3>
+        <p>
+          At Care For All, we prioritize inclusivity, respect, and integrity,
+          striving to enhance the quality of life for individuals with
+          disabilities through accessible healthcare solutions. Our passionate
+          team promotes independence, dignity, and holistic wellness with
+          innovative, person-centered care. Committed to collaboration and
+          diversity, we advocate for the rights and health equity of those we
+          serve.
+        </p>
+
         <h3>Job Requirements</h3>
         <ul>
           <li>High school diploma or equivalent is required</li>
@@ -56,14 +67,13 @@ const CareersPage = () => {
           </a>
         </p>
         <p>
-          At Care For All, we are committed to fostering a culture of
-          inclusivity, respect, and integrity. We are dedicated to providing
-          comprehensive and accessible healthcare solutions that enhance the
-          quality of life for people with disabilities. Our team is passionate
-          about promoting independence, dignity, and holistic wellness through
-          innovative and person-centered care. We are committed to
-          collaboration, embracing diversity, and advocating for the rights and
-          health equity of individuals with disabilities.
+          At Care For All, we foster an inclusive culture of respect and
+          integrity, delivering comprehensive healthcare solutions to enhance
+          the quality of life for individuals with disabilities. Our passionate
+          team promotes independence, dignity, and holistic wellness through
+          innovative, person-centered care. We prioritize collaboration,
+          diversity, and advocacy for the rights and health equity of all
+          individuals with disabilities.
         </p>
       </div>
     </section>

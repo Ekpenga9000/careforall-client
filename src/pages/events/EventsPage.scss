@@ -1,3 +1,25 @@
 @use "../../styles/partials/mixin" as *; 
 @use "../../styles/partials/variables" as *; 
 @use "../../styles/partials/typography" as *; 
+
+
+.events {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &__container {
+    @include tablet {
+      width: $tablet-screen-size;
+    }
+    @include desktop {
+      width: $desktop-screen-size;
+    }
+  }
+  &__heading{
+    margin-bottom: 1.5rem;
+  }
+  &__div {
+    height: 50vh;
+  }
+  
+}

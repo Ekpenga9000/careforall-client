@@ -1,0 +1,59 @@
+@use "../../styles/partials/mixin" as *; 
+@use "../../styles/partials/variables" as *; 
+@use "../../styles/partials/typography" as *; 
+
+.ceo{
+    margin-block: 2rem;
+    &__title{
+        text-align: center;
+        padding-block: 1rem;
+        margin-bottom: 2rem;
+        background-color: $color-alternate;
+        color: $color-secondary;
+    }
+    &__container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 1rem;
+        align-items: center;
+        padding: 1rem;
+        @include tablet{
+            width: $tablet-screen-size;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        @include desktop{
+            width: $desktop-screen-size;
+            padding:0;
+        }
+    }
+    &__h3{
+        color: $color-primary;
+        font-size: 1.5rem;
+        font-weight: 600;
+        margin-bottom: 1.5rem;
+    }
+    &__img-div{
+        width: 100%;
+        height: 70vh;
+        margin-bottom: 1rem;
+        border-radius:0.75rem;
+        @include tablet{
+            width: 50%;
+        }
+    }
+    &__img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius:0.75rem;
+    }
+    &__div{
+        @include tablet{
+            width: 40%;
+            display: flex;
+            flex-direction: column;
+        }
+    }
+}

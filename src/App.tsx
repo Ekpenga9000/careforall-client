@@ -8,6 +8,7 @@ import AboutPage from './pages/about/AboutPage';
 import ServicesPage from './pages/services/ServicesPage';
 import EventsPage from './pages/events/EventsPage';
 import CareersPage from './pages/careers/CareersPage';
+import WaitList from './pages/waitlist/WaitList';
 
 
 const App:FC = ():ReactElement => {
@@ -22,6 +23,7 @@ const App:FC = ():ReactElement => {
           <Route path='/services' element={<ServicesPage/> } />
           <Route path='/events' element={<EventsPage/> } />
           <Route path='/careers' element={<CareersPage/> } />
+          <Route path='/waitlist' element={<WaitList/> } />
         </Routes>
         <Footer/>
       </BrowserRouter>

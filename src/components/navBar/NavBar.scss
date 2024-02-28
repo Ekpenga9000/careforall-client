@@ -78,6 +78,10 @@
       @include menu-items;
     }
   }
+  &__active{
+    color: $color-primary;
+    text-decoration: none;
+  }
   &__link{
     text-decoration: none;
     color: $text-primary;

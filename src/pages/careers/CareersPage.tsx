@@ -1,6 +1,12 @@
 import "./CareersPage.scss";
 import career from "../../assets/images/careforall2.jpg";
+import { useEffect } from "react";
+
 const CareersPage = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+    document.title = "Care For All - Home";
+  }, []);
   return (
     <section className="careers">
       <div className="careers__container">

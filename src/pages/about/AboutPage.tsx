@@ -7,8 +7,12 @@ import CTA from "../../components/cta/CTA";
 import Contact from "../../components/contact-form/Contact";
 import MeetCeo from "../../components/meetCeo/MeetCeo";
 import culturePic from "../../assets/images/careforall3.jpg";
-
+import { useEffect } from "react";
 const AboutPage: FC = (): ReactElement => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+    document.title = "Care For All - About us";
+  }, []);
   return (
     <section className="about">
       <div className="about__container">
@@ -28,13 +32,9 @@ const AboutPage: FC = (): ReactElement => {
               for the rights and health equity of individuals with disabilities.{" "}
             </p>
           </div>
-            <div className="about__img-div">
-              <img
-                src={culturePic}
-                alt="A family ."
-                className="about__img"
-              />
-            </div>
+          <div className="about__img-div">
+            <img src={culturePic} alt="A family ." className="about__img" />
+          </div>
         </div>
         <AboutValues />
         <MeetCeo />

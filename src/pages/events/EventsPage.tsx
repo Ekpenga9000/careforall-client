@@ -1,7 +1,12 @@
 import Contact from "../../components/contact-form/Contact";
 import "./EventsPage.scss";
+import { useEffect } from "react";
 
 const EventsPage = () => {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+        document.title = "Care For All - Events";
+    }, []);
   return (
     <section className="events">
       <div className="events__container">

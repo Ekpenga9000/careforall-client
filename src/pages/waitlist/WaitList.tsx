@@ -1,6 +1,13 @@
 import "./WaitList.scss";
 import { Link } from "react-router-dom";
+import { useEffect } from "react";
+
 const WaitList = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+    document.title = "Care For All - Waitlist";
+  }, []);
+
   return (
     <section>
       <div className="waitlist">
@@ -28,7 +35,9 @@ const WaitList = () => {
                   className="waitlist__btn"
                 />
               </form>
-              <Link to={"/"} className="waitlist__link">Go home</Link>
+              <Link to={"/"} className="waitlist__link">
+                Go home
+              </Link>
             </div>
           </div>
         </div>

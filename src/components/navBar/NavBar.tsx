@@ -1,5 +1,5 @@
 import { FC, ReactElement, useRef, useLayoutEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { MdOutlineClose } from "react-icons/md";
 import logo from "../../assets/logo/cfa-transparent.png";
@@ -7,6 +7,7 @@ import "./NavBar.scss";
 import gsap from "gsap";
 
 const NavBar: FC = (): ReactElement => {
+  const location = useLocation();
   const [isSliderActive, setIsSliderActive] = useState<boolean>(false);
   const comp = useRef(null); 
   const slider = useRef(null);
@@ -59,18 +60,18 @@ const NavBar: FC = (): ReactElement => {
         </div>
 
        {isSliderActive && <ul className="nav__menu--mobile" ref={slider}>
-          <li className="nav__item--mobile"><Link to={"/services"} className="nav__link">Services</Link></li>
-          <li className="nav__item--mobile"><Link to={"/about"} className="nav__link">About us</Link></li>
-          <li className="nav__item--mobile"><Link to={"/events"} className="nav__link">Events</Link></li>
-          <li className="nav__item--mobile"><Link to={"/careers"} className="nav__link">Get Involved</Link></li>
+          <li className="nav__item--mobile"><Link to={"/services"} className={location.pathname === "/services" ? "nav__active" : "nav__link"}>Services</Link></li>
+          <li className="nav__item--mobile"><Link to={"/about"} className={location.pathname === "/about" ? "nav__active" : "nav__link"}>About us</Link></li>
+          <li className="nav__item--mobile"><Link to={"/events"} className={location.pathname === "/events" ? "nav__active" : "nav__link"}>Events</Link></li>
+          <li className="nav__item--mobile"><Link to={"/careers"} className={location.pathname === "/careers" ? "nav__active" : "nav__link"}>Get Involved</Link></li>
           <li className="nav__item--mobile">Community</li>
         </ul>}
 
         <ul className="nav__menu">
-          <li className="nav__item"><Link to={"/services"} className="nav__link">Services</Link></li>
-          <li className="nav__item"><Link to={"/about"} className="nav__link">About us</Link></li>
-          <li className="nav__item"><Link to={"/events"} className="nav__link">Events</Link></li>
-          <li className="nav__item"><Link to={"/careers"} className="nav__link">Get Involved</Link></li>
+          <li className="nav__item"><Link to={"/services"} className={location.pathname === "/services" ? "nav__active" : "nav__link"}>Services</Link></li>
+          <li className="nav__item"><Link to={"/about"} className={location.pathname === "/about" ? "nav__active" : "nav__link"}>About us</Link></li>
+          <li className="nav__item"><Link to={"/events"} className={location.pathname === "/events" ? "nav__active" : "nav__link"}>Events</Link></li>
+          <li className="nav__item"><Link to={"/careers"} className={location.pathname === "/careers" ? "nav__active" : "nav__link"}>Get Involved</Link></li>
           <li className="nav__item">Community</li>
         </ul>
       </nav>

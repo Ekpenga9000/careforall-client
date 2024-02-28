@@ -1,4 +1,5 @@
 import CTA from "../../components/cta/CTA";
+import { useEffect } from "react";
 import Contact from "../../components/contact-form/Contact";
 import { tiles } from "../../assets/data/data";
 import Tiles from "../../components/tiles/Tiles";
@@ -7,6 +8,10 @@ import { Link } from "react-router-dom";
 import serviceHero from "../../assets/images/serviceHero.jpg";
 
 const ServicesPage = () => {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+        document.title = "Care For All - Services";
+    }, []);
   return (
     <section className="services">
       <div className="services__container">

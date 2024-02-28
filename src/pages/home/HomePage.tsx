@@ -1,4 +1,4 @@
-import { FC, ReactElement } from "react";
+import { FC, ReactElement, useEffect } from "react";
 import "./HomePage.scss";
 import Hero from "../../components/heroSection/Hero";
 import { data } from '../../assets/data/data';
@@ -7,10 +7,15 @@ import photo2 from "../../assets/images/careforall3.jpg";
 import icon1 from "../../assets/icons/missionIcon.png";
 import icon2 from "../../assets/icons/donationIcon.png";
 import Contact from "../../components/contact-form/Contact";
-import Tiles, { TilesProps } from "../../components/tiles/Tiles";
+import Tiles from "../../components/tiles/Tiles";
+import { TilesProps } from "../../components/interfaces/interface";
 import CTA from "../../components/cta/CTA";
 import CardList from "../../components/cardList/CardList";
 const HomePage: FC = (): ReactElement => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+    document.title = "Care For All - Home";
+}, []);
   const imageObj1 = {
     src: photo1,
     alt: "Man and boy with special needs laughing facing each other.",
@@ -31,6 +36,7 @@ const HomePage: FC = (): ReactElement => {
   };
 
   const tilesProps1: TilesProps = {
+    id: 1,
     image: imageObj1,
     icon: iconObj1,
     header: "It’s all about impact",
@@ -39,6 +45,7 @@ const HomePage: FC = (): ReactElement => {
   };
 
   const tilesProps2: TilesProps = {
+    id: 2,
     image: imageObj2,
     icon: iconObj2,
     header: "Community is vital",

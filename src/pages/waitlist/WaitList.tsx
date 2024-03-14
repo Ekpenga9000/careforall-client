@@ -34,9 +34,9 @@ const WaitList = () => {
     try {
       const message = `Hello, my name is ${name}, my email is ${email} and I would like to join the waitlist.`;
       const emailReq = {
-        serviceId: "service_79fkvsb",
-        templateId: "template_yer32ra",
-        publicKey: "0_vM7HVU_rNxyMtv_",
+        serviceId: "service_d9gogys",
+        templateId: "template_spmds01",
+        publicKey: "psOtIaNyPC-egpg5m",
       };
       const templateParams = {
         from_name: name,
@@ -56,9 +56,7 @@ const WaitList = () => {
       );
       setFormValue({ ...initialState });
       setMessage("Thank you for joining the waitlist!");
-      console.log("Email sent successfully!");
     } catch (error) {
-      console.log(error);
       setMessage("Something went wrong, please try again later.");
     }
   };
@@ -79,7 +77,7 @@ const WaitList = () => {
                   name="name"
                   placeholder="Enter your full name"
                   className="waitlist__input"
-                  value={formValue.name}
+                  value={formValue.name as string}
                   onChange={handleChange}
                 />
                 <input
@@ -87,7 +85,7 @@ const WaitList = () => {
                   name="email"
                   placeholder="Enter your email"
                   className="waitlist__input"
-                  value={formValue.email}
+                  value={formValue.email as string}
                   onChange={handleChange}
                 />
                 <button className="waitlist__btn">Join the waitlist</button>

@@ -107,9 +107,7 @@ const Contact: FC = (): ReactElement => {
       );
       setFormData({ ...initialState });
       setMessage("Thank you for reaching out!");
-      console.log("Email sent successfully!");
     } catch (error) {
-      console.log(error);
       setMessage("Something went wrong, please try again later.");
     }
   };

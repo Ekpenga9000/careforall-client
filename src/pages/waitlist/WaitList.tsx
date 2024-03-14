@@ -2,7 +2,6 @@ import "./WaitList.scss";
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { FormState } from "../../interfaces/interfaces";
-import { handleFormChange } from "../../utils/formFunctions";
 import emailjs from "@emailjs/browser";
 
 const WaitList = () => {
@@ -20,7 +19,8 @@ const WaitList = () => {
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
-    handleFormChange(e, formValue, setFormValue);
+    setMessage("");
+    setFormValue({ ...formValue, [e.target.name]: e.target.value });
   };
 
   const handleSubmit = async(e: React.FormEvent<HTMLFormElement>) => {

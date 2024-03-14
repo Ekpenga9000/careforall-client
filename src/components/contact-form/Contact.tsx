@@ -1,5 +1,6 @@
 import { ReactElement, FC, useRef, useLayoutEffect, useState } from "react";
 import "./Contact.scss";
+import emailjs from "@emailjs/browser";
 import imgUrl from "../../assets/images/careforall4.jpg";
 import ImageComponent from "../imageComponent/ImageComponent";
 import gsap from "gsap";
@@ -8,8 +9,8 @@ import { FormState } from "../../interfaces/interfaces";
 gsap.registerPlugin(ScrollTrigger);
 
 const Contact: FC = (): ReactElement => {
-  const[formData, setFormData] = useState<FormState>({
-    name: "",
+  const [formData, setFormData] = useState<FormState>({
+    fullname: "",
     phonenumber: "",
     email: "",
     counselling: false,
@@ -17,11 +18,7 @@ const Contact: FC = (): ReactElement => {
     skilldevelopment: false,
     others: false,
   });
-
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-  };
-
+  const [message, setMessage] = useState("");
   const comp = useRef(null);
   const contactDiv = useRef(null);
 
@@ -40,7 +37,81 @@ const Contact: FC = (): ReactElement => {
   }, []);
 
   const handleFormChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    
+    setMessage("");
+    const { name, value, type, checked } = e.target;
+    const val = type === "checkbox" ? checked : value;
+    setFormData((prev) => ({ ...prev, [name]: val }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const {
+      fullname,
+      phonenumber,
+      email,
+      counselling,
+      homeservice,
+      skilldevelopment,
+      others,
+    } = formData;
+
+    if (
+      ![fullname, phonenumber, email].every(
+        (field) => typeof field === "string" && field.trim()
+      )
+    ) {
+      setMessage("Please ensure that all form fields are filled.");
+      return;
+    }
+
+    if (
+      ![counselling, homeservice, skilldevelopment, others].some(
+        (field) => field
+      )
+    ) {
+      setMessage("Please select at least one service.");
+      return;
+    }
+
+    try {
+      const message = `Hello, my name is ${fullname}, my email is ${email} and my phone number is ${phonenumber}. I'm seeking the following services: ${
+        counselling ? "Professional Counselling" : ""
+      } ${homeservice ? "Home Service Support" : ""} ${
+        skilldevelopment ? "Skill Development" : ""
+      } ${others ? "Others services" : ""}`;
+      const emailReq = {
+        serviceId: "service_agfu60a",
+        templateId: "template_iu6mtqb",
+        publicKey: "HED-OPmCn_S5yXKxx",
+      };
+      const templateParams = {
+        from_name: fullname,
+        from_email: email,
+        to_name: "Care For All - Client Services",
+        message,
+      };
+      const initialState: FormState = {
+        fullname: "",
+        phonenumber: "",
+        email: "",
+        counselling: false,
+        homeservice: false,
+        skilldevelopment: false,
+        others: false,
+      };
+      await emailjs.send(
+        emailReq.serviceId,
+        emailReq.templateId,
+        templateParams,
+        emailReq.publicKey
+      );
+      setFormData({ ...initialState });
+      setMessage("Thank you for reaching out!");
+      console.log("Email sent successfully!");
+    } catch (error) {
+      console.log(error);
+      setMessage("Something went wrong, please try again later.");
+    }
   };
 
   return (
@@ -64,20 +135,26 @@ const Contact: FC = (): ReactElement => {
               <input
                 type="text"
                 placeholder="Name"
-                name="name"
+                name="fullname"
                 className="contact__input"
+                onChange={handleFormChange}
+                value={formData.fullname as string}
               />
               <input
                 type="text"
                 placeholder="Phone Number"
                 name="phonenumber"
                 className="contact__input"
+                onChange={handleFormChange}
+                value={formData.phonenumber as string}
               />
               <input
                 type="email"
                 placeholder="Email"
                 name="email"
                 className="contact__input"
+                onChange={handleFormChange}
+                value={formData.email as string}
               />
             </div>
             <div>
@@ -90,6 +167,8 @@ const Contact: FC = (): ReactElement => {
                   name="counselling"
                   id="counselling"
                   className="contact__checkbox"
+                  onChange={handleFormChange}
+                  checked={formData.counselling as boolean}
                 />
                 <label htmlFor="counselling" className="contact__label">
                   Professional Counselling
@@ -101,6 +180,8 @@ const Contact: FC = (): ReactElement => {
                   name="homeservice"
                   id="homeservice"
                   className="contact__checkbox"
+                  onChange={handleFormChange}
+                  checked={formData.homeservice as boolean}
                 />
                 <label htmlFor="homeservice" className="contact__label">
                   Home Service Support
@@ -112,6 +193,8 @@ const Contact: FC = (): ReactElement => {
                   name="skilldevelopment"
                   id="skilldevelopment"
                   className="contact__checkbox"
+                  onChange={handleFormChange}
+                  checked={formData.skilldevelopment as boolean}
                 />
                 <label htmlFor="skilldevelopment" className="contact__label">
                   Skill Development
@@ -123,6 +206,8 @@ const Contact: FC = (): ReactElement => {
                   name="others"
                   id="others"
                   className="contact__checkbox"
+                  onChange={handleFormChange}
+                  checked={formData.others as boolean}
                 />
                 <label htmlFor="others" className="contact__label">
                   Others
@@ -133,6 +218,7 @@ const Contact: FC = (): ReactElement => {
               <button className="contact__btn">Submit</button>
             </div>
           </form>
+          {message && <p className="contact__input">{message}</p>}
         </div>
       </div>
     </section>

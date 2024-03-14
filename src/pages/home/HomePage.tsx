@@ -1,7 +1,7 @@
 import { FC, ReactElement, useEffect } from "react";
 import "./HomePage.scss";
 import Hero from "../../components/heroSection/Hero";
-import { data } from '../../assets/data/data';
+import { data } from "../../assets/data/data";
 import photo1 from "../../assets/images/careforall2.jpg";
 import photo2 from "../../assets/images/careforall3.jpg";
 import icon1 from "../../assets/icons/missionIcon.png";
@@ -11,12 +11,12 @@ import Tiles from "../../components/tiles/Tiles";
 import { TilesProps } from "../../components/interfaces/interface";
 import CTA from "../../components/cta/CTA";
 import CardList from "../../components/cardList/CardList";
-import VideoMessage from "../../components/videoMessage/VideoMessage";
+
 const HomePage: FC = (): ReactElement => {
   useEffect(() => {
     window.scrollTo(0, 0);
     document.title = "Care For All - Home";
-}, []);
+  }, []);
   const imageObj1 = {
     src: photo1,
     alt: "Man and boy with special needs laughing facing each other.",
@@ -58,14 +58,12 @@ const HomePage: FC = (): ReactElement => {
       <div className="homepage__container">
         <Hero />
         <div className="homepage__carousel">
-          <CardList cards={data}/>
-        {/* <CarouselDemo cards={data} /> */}
+          <CardList cards={data} />
         </div>
         <section className="homepage__tile-div">
           <Tiles {...tilesProps1} />
           <Tiles {...tilesProps2} />
-          <VideoMessage />
-          <CTA msg = "Spread kindness with Care For All! Join us as a volunteer or ambassador, let's unite to create a positive impact together."/>
+          <CTA msg="Spread kindness with Care For All! Join us as a volunteer or ambassador, let's unite to create a positive impact together." />
         </section>
         <Contact />
       </div>

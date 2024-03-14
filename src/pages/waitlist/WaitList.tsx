@@ -1,12 +1,12 @@
 import "./WaitList.scss";
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
-import { IWaitlistForm } from "../../interfaces/interfaces";
+import { FormState } from "../../interfaces/interfaces";
 import { handleFormChange } from "../../utils/formFunctions";
 import emailjs from "@emailjs/browser";
 
 const WaitList = () => {
-  const [formValue, setFormValue] = useState<IWaitlistForm>({
+  const [formValue, setFormValue] = useState<FormState>({
     name: "",
     email: "",
   });
@@ -21,19 +21,18 @@ const WaitList = () => {
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
     handleFormChange(e, formValue, setFormValue);
-    setMessage("");
   };
 
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async(e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const { name, email } = formValue;
-    if (!name || !email) {
+    if (typeof name !== 'string' || typeof email !== 'string' || !name.trim() || !email.trim()) {
       setMessage("Please ensure that all form fields are filled.");
       return;
     }
-    const message = `Hello, my name is ${name}, my email is ${email} and I would like to join the waitlist.`;
-
+    
     try {
+      const message = `Hello, my name is ${name}, my email is ${email} and I would like to join the waitlist.`;
       const emailReq = {
         serviceId: "service_79fkvsb",
         templateId: "template_yer32ra",
@@ -45,7 +44,7 @@ const WaitList = () => {
         to_name: "Care For All - Waitlist",
         message,
       };
-      const initialState: IWaitlistForm = {
+      const initialState: FormState = {
         name: "",
         email: "",
       };
@@ -55,8 +54,8 @@ const WaitList = () => {
         templateParams,
         emailReq.publicKey
       );
+      setFormValue({ ...initialState });
       setMessage("Thank you for joining the waitlist!");
-      setTimeout(() => { setFormValue({ ...initialState }); }, 5000);
       console.log("Email sent successfully!");
     } catch (error) {
       console.log(error);

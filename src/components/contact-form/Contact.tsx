@@ -1,12 +1,23 @@
-import { ReactElement, FC, useRef, useLayoutEffect } from "react";
+import { ReactElement, FC, useRef, useLayoutEffect, useState } from "react";
 import "./Contact.scss";
 import imgUrl from "../../assets/images/careforall4.jpg";
 import ImageComponent from "../imageComponent/ImageComponent";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { FormState } from "../../interfaces/interfaces";
 gsap.registerPlugin(ScrollTrigger);
 
 const Contact: FC = (): ReactElement => {
+  const[formData, setFormData] = useState<FormState>({
+    name: "",
+    phonenumber: "",
+    email: "",
+    counselling: false,
+    homeservice: false,
+    skilldevelopment: false,
+    others: false,
+  });
+
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
   };
@@ -28,6 +39,10 @@ const Contact: FC = (): ReactElement => {
     return () => ctx.revert();
   }, []);
 
+  const handleFormChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    
+  };
+
   return (
     <section className="contact" ref={comp}>
       <div className="contact__container" ref={contactDiv}>
@@ -48,8 +63,8 @@ const Contact: FC = (): ReactElement => {
             <div className="contact__input-div">
               <input
                 type="text"
-                placeholder="First Name"
-                name="firstname"
+                placeholder="Name"
+                name="name"
                 className="contact__input"
               />
               <input

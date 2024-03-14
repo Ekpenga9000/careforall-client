@@ -1,4 +1,3 @@
-export interface IWaitlistForm{
-    name: string;
-    email: string;
+export interface FormState{
+    [key:string]:string | boolean;
 }

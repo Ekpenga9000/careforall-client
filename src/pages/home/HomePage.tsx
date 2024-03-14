@@ -11,6 +11,7 @@ import Tiles from "../../components/tiles/Tiles";
 import { TilesProps } from "../../components/interfaces/interface";
 import CTA from "../../components/cta/CTA";
 import CardList from "../../components/cardList/CardList";
+import VideoMessage from "../../components/videoMessage/VideoMessage";
 const HomePage: FC = (): ReactElement => {
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -63,6 +64,7 @@ const HomePage: FC = (): ReactElement => {
         <section className="homepage__tile-div">
           <Tiles {...tilesProps1} />
           <Tiles {...tilesProps2} />
+          <VideoMessage />
           <CTA msg = "Spread kindness with Care For All! Join us as a volunteer or ambassador, let's unite to create a positive impact together."/>
         </section>
         <Contact />

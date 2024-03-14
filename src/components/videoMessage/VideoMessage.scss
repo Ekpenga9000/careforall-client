@@ -1,0 +1,39 @@
+@use "../../styles/partials/mixin" as *;
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/typography" as *;
+
+.video {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+  &__container {
+    @include tablet {
+      width: $tablet-screen-size;
+    }
+    @include desktop {
+      width: $desktop-screen-size;
+    }
+  }
+  &__header {
+    text-align: center;
+    width: 100vw;
+    margin-block: 1.5rem;
+    padding-block: 1.5rem;
+    background-color: $color-alternate;
+    color: $color-secondary;
+    @include tablet {
+      width: $tablet-screen-size;
+    }
+    @include desktop {
+      width: $desktop-screen-size;
+    }
+  }
+  &__vid {
+    height: 100%;
+    width: 100%;
+  }
+  &__div {
+    height: 70vh;
+  }
+}

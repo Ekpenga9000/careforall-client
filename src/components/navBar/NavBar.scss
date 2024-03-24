@@ -58,13 +58,14 @@
       flex-direction: column;
       justify-content: space-evenly;
       align-items: center;
-      top: 3rem;
+      top: 5rem;
       right: 0;
       height: 91vh;
       width: 100vw;
       // margin: 0;
       @include tablet{
         width: 50%;
+        top: 3rem;
         background-color: rgba($color: $color-secondary, $alpha: 0.95);
       }
       @include desktop{

@@ -30,8 +30,12 @@
     text-decoration: none;
   }
   &__logo-div {
-    height: 3rem;
-    width: 3rem;
+    height: 5rem;
+    width: 5rem;
+    @include tablet{
+      height: 3rem;
+      width: 3rem;
+    }
   }
   &__logo {
     height: 100%;

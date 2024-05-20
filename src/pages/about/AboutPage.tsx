@@ -5,7 +5,7 @@ import AboutVision from "../../components/aboutVision/AboutVision";
 import AboutValues from "../../components/aboutValues/AboutValues";
 import CTA from "../../components/cta/CTA";
 import Contact from "../../components/contact-form/Contact";
-import MeetCeo from "../../components/meetCeo/MeetCeo";
+// import MeetCeo from "../../components/meetCeo/MeetCeo";
 import culturePic from "../../assets/images/careforall3.jpg";
 import { useEffect } from "react";
 const AboutPage: FC = (): ReactElement => {
@@ -37,7 +37,7 @@ const AboutPage: FC = (): ReactElement => {
           </div>
         </div>
         <AboutValues />
-        <MeetCeo />
+        {/* <MeetCeo /> */}
         <CTA msg=" Compassion guides our actions as we prioritize inclusivity, respect, and integrity. We are committed to collaboration, embracing diversity, and advocating for the rights and health equity of individuals with disabilities." />
         <Contact />
       </div>

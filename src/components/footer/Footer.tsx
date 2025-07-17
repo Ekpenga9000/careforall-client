@@ -16,19 +16,15 @@ const Footer: FC = (): ReactElement => {
             <div>
               <h4 className="footer__header">Contact</h4>
               <p className="footer__p">Phone: (519) 697-3683 </p>
-              <a
-                className="footer__p"
-                href={`mailto:abasstijani@careforall.ca`}
-              >
-                Email: abasstijani@careforall.ca
+              <a className="footer__p" href={`mailto:info@careforall.ca`}>
+                Email: info@careforall.ca
               </a>
               <ul className="footer__menu-item">
                 <li className="footer__list">
                   <a
                     href="https://www.instagram.com/careforall.ca/"
                     target="blank"
-                    className="footer__icon-link"
-                  >
+                    className="footer__icon-link">
                     <FaInstagram className="footer__icon" />
                   </a>
                 </li>
@@ -36,17 +32,12 @@ const Footer: FC = (): ReactElement => {
                   <a
                     href="https://www.facebook.com/careforallinc"
                     target="blank"
-                    className="footer__icon-link"
-                  >
+                    className="footer__icon-link">
                     <FaFacebookF className="footer__icon" />
                   </a>
                 </li>
                 <li className="footer__list">
-                  <a
-                href="/"
-                    target="blank"
-                    className="footer__icon-link"
-                  >
+                  <a href="/" target="blank" className="footer__icon-link">
                     <FaLinkedinIn className="footer__icon" />
                   </a>
                 </li>
